@@ -1,0 +1,27 @@
+serviceConfig:
+  scheme: http://
+  hostName: 
+  port: 
+  path: /api/movies
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: movieService.log
+
+databaseConfig:
+  dbUsername: 
+  dbPassword: 
+  dbHostname: 
+  dbPort: 3306
+  dbDriver: com.mysql.cj.jdbc.Driver
+  dbName: 
+  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+
+idmConfig:
+  scheme: http://
+  hostName: 
+  port: 
+  path: /api/idm
+
+idmEndpoints:
+  privilege: privilege
