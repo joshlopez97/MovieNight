@@ -1,0 +1,37 @@
+.movie-holder
+{
+  width: calc(100% - 30px) !important;
+  background: #000000c7;
+  padding: 15px;
+  margin: 20px 0;
+  cursor: pointer;
+  color: #b5b5b5;
+  display: block;
+}
+.movie-holder-content
+{
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+}
+.movie-thumbnail
+{
+  height: 70px;
+}
+.filters-container
+{
+  padding: 40px 0 0;
+  width: 100%;
+}
+.popup
+{
+  width: 80% !important;
+}
+.filter-holder
+{
+  font-size: 10pt;
+}
+select
+{
+  font-size: 10pt;
+}

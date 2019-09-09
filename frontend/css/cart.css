@@ -1,0 +1,158 @@
+.shoppingcart
+{
+  display: none;
+}
+.delete-btn-holder
+{
+  display: inline-block;
+  width: 20%;
+  position: absolute;
+  right: 0;
+  padding: 38px;
+}
+button.delete-btn
+{
+  border: 1px solid gray;
+  color: gray;
+}
+button.delete-btn:hover
+{
+  color: black;
+  background: white;
+}
+.stacked-item
+{
+  padding: 6px;
+  background: #000000c7;
+  border-bottom: none;
+  margin-bottom: 5px;
+}
+.stacked-item.clickable
+{
+  cursor: pointer;
+}
+.stacked-item.clickable:hover
+{
+  background: #131421e6;
+}
+.stacked-item-content
+{
+  color: white;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  width: calc(100% - 82px);;
+}
+input.quantity
+{
+  width: 50px;
+}
+
+div.movie-detail-holder.quantity
+{
+  padding: 15px 0;
+}
+button.submit-quantity
+{
+  visibility: hidden;
+  font-size: 9pt;
+  padding: 1px 12px;
+}
+div.submit-quantity-holder
+{
+  display: inline-block;
+  margin-left: 5px;
+}
+#clear-cart
+{
+  padding: 0 6px;
+  margin-bottom: 10px;
+}
+#checkout-btn
+{
+  font-size: 14pt;
+}
+.checkout-btn-holder
+{
+  text-align: right;
+  padding: 25px 0;
+}
+.cc-info
+{
+  color: white;
+}
+
+/* Side-by-side Inputs */
+label.big-side-label
+{
+  width: 65%;
+  display: inline-block;
+}
+input.big-side-text
+{
+  width: calc(65% - 25px);
+  margin-right: 8px;
+}
+label.small-side-label
+{
+  width: 10%;
+  display: inline-block;
+}
+input.small-side-text
+{
+  width: calc(15% - 10px);
+}
+
+label.half-side-label
+{
+  width: 40%;
+  display: inline-block;
+}
+
+/* Order History */
+.orderhist
+{
+  display: none;
+}
+.transaction-header
+{
+  font-size: 14pt;
+  font-weight: 100;
+  padding: 8px;
+}
+.transaction-holder
+{
+  color: white;
+  margin: 15px 0;
+  display: inline-block;
+  width: 100%;
+}
+.transaction-date
+{
+
+}
+.price-breakdown
+{
+  float: right;
+  text-align: right;
+  font-weight: 100;
+}
+.price-labels-holder
+{
+  float: right;
+  text-align: right;
+  padding: 0 25px;
+  font-weight: 100;
+}
+.transaction-price
+{
+  line-height: 15px;
+}
+.transaction-price.total
+{
+  font-weight: bold;
+}
+.transaction-label
+{
+  line-height: 15px;
+}

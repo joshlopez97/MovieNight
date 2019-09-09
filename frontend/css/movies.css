@@ -1,0 +1,427 @@
+/* Movie List */
+.page-container
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 74px 45px;
+  width: calc(100% - 90px);
+  background: #0d0e13d9;
+  display: none;
+  z-index: 1;
+  min-height: 100%;
+}
+.page-title
+{
+  font-size: 19pt;
+  color: white;
+  font-weight: 100;
+  margin: 5px 5px 12px;
+}
+.results-notice
+{
+  color: white;
+  padding: 100px;
+  font-size: 14pt;
+  text-align: center;
+  font-weight: 100;
+}
+.movie-holder {
+  background: #000000c7;
+  padding: 15px;
+  cursor: pointer;
+  color: #b5b5b5;
+  display: inline-block;
+  width: calc(45% - 30px);
+  height: 104px;
+  margin: 20px 2.5%;
+}
+.movie-holder:nth-child(odd)
+{
+  width: calc(47.5% - 30px);
+  margin-left: 0;
+}
+.movie-holder:nth-child(even)
+{
+  width: calc(47.5% - 30px);
+  margin-right: 0;
+}
+.movie-holder:hover
+{
+  background: #131421e6;
+}
+.movie-holder-content
+{
+  color: white;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  width: 75%;
+}
+.movie-detail-holder
+{
+  font-size: 11pt;
+  color: #737373;
+  padding: 3px;
+}
+.movie-header-holder
+{
+  display: inline-block;
+  vertical-align: top;
+}
+.movie-title
+{
+  font-size: 12pt;
+}
+.movie-year
+{
+  margin-left: 5px;
+  color: #737373;
+  font-size: 11pt;
+}
+.movie-thumbnail-holder
+{
+  display: inline-block;
+}
+.movie-thumbnail
+{
+  height: 100px;
+}
+.movie-thumbnail-holder-small
+{
+  padding: 10px;
+  display: inline-block;
+}
+.movie-thumbnail-small
+{
+  width: 47px;
+}
+
+/* Page Numbers */
+.page-holder
+{
+  text-align: center;
+  color: #c3c3c3;
+  font-size: 11pt;
+  font-weight: 100;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+}
+.page-btn
+{
+  margin: 0 6px;
+  padding: 1px 6px;
+}
+.page-btn.current-page-btn, .page-btn:hover
+{
+  background: white;
+  color: black;
+}
+
+/* Filters */
+.filters-container
+{
+  display: none;
+  z-index: 50;
+  padding: 36px 15px 0;
+  border-radius: 15px;
+  position: relative;
+  width: calc(100% - 30px);
+}
+select
+{
+  background: #00000099;
+  border: 2px solid #41425a;
+}
+select.filter, input.filter
+{
+  border-radius: 0;
+  color: white;
+  height: 25px;
+  font-size: 11pt;
+}
+.genre-dropdown
+{
+  height: 40px;
+  margin-bottom:20px;
+  display: none;
+}
+#genre
+{
+  position: absolute;
+  font-size: 17pt;
+  z-index: 1;
+  height: 33px;
+  width: 175px;
+}
+.filter-label
+{
+  color: #c3c3c3;
+}
+.filter-holder
+{
+  font-size: 11pt;
+  display: inline-block;
+  margin-right: 15px;
+}
+.filter-holder:last-child
+{
+  margin-right: 0;
+}
+
+/* Title Letter Sidebar */
+.title-sidebar-holder
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 74px 0;
+  height: calc(100% - 74px);
+  overflow: hidden;
+  width: 40px;
+  z-index: 2;
+  display: none;
+}
+.title-sidebar
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  list-style: none;
+  overflow-y: scroll;
+  height: 100%;
+  width: 80px;
+  padding: 0 18px;
+}
+.title-sidebar-item
+{
+  cursor: pointer;
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: #a9a9a9;
+  font-weight: 100;
+}
+.title-sidebar-item:hover
+{
+  color: white;
+}
+.title-sidebar-item.active-letter
+{
+  color: white;
+}
+
+/* Ratings */
+.rating
+{
+  display: block;
+  vertical-align: top;
+  margin: 3px 0;
+}
+.numVotes
+{
+  font-size: 9pt;
+  color: #949494;
+  padding: 3px;
+  vertical-align: top;
+}
+.popup-movie-header-content > .rating
+{
+  padding: 5px 0;
+  margin-left: 3px;
+}
+.stars
+{
+  position: absolute;
+  height: 60px;
+  background-size: 90px;
+  background-repeat: no-repeat;
+}
+.yellow.stars
+{
+  background-image: url(../img/starsyellow.png);
+  z-index: 1;
+}
+.grey.stars
+{
+  background-image: url(../img/starsgrey.png);
+  background-position-x: right;
+}
+.create-rating.link
+{
+  padding: 0 5px;
+}
+
+/* Create Rating Dialog */
+.rating-dialog
+{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #000000a8;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+.big-rating
+{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rating-section
+{
+  position: absolute;
+  z-index: 1000;
+  cursor: pointer;
+}
+.rating-dialog-text
+{
+  color: white;
+  font-size: 50pt;
+  font-weight: 100;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rating-dialog-subtext
+{
+  color: #efefef;
+  font-size: 17pt;
+  font-weight: 100;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* Movie details popup */
+.popup.movie
+{
+  width: 550px;
+}
+.popup-fields-movies
+{
+  display: inline-block;
+  margin-right: 30px;
+}
+.popup-movie-header-content
+{
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 10px;
+}
+.popup-movie-details
+{
+  margin: 10px 30px;
+  overflow: scroll;
+  height: 200px;
+  background: #16171c;
+  font-size: 12pt;
+  padding: 10px;
+}
+.popup-movie-detail-holder
+{
+  font-weight: 100;
+  color: white;
+  margin-bottom: 5px;
+}
+.popup-movie-detail-label
+{
+  color: #c1c1c1;
+}
+.genre-link
+{
+  background: none;
+  color: white;
+  border-radius: 11px;
+  padding: 1px 15px;
+  font-size: 11pt;
+  cursor: pointer;
+  margin: 3px 8px;
+}
+.genre-link:hover
+{
+  border: 1px solid black;
+  background: white;
+  color: black;
+}
+.genre-holder
+{
+  margin: 0 30px;
+}
+
+/* Search bar */
+input[type="text"].searchbar
+{
+  height: 29px;
+  z-index: 5;
+  border-radius: 12px 0 0 12px;
+  width: 50%;
+  font-size: 15pt;
+  margin: 0;
+  border: none;
+  background: #ffffffb0;
+  color: black;
+  padding: 1px 5px;
+  vertical-align: middle;
+}
+.searchbar.btn
+{
+  width: 45px;
+  background: black;
+  border: 1px solid white;
+  border-radius: 0 12px 12px 0;
+  padding: 5px;
+  margin-left: -4px;
+  height: 31px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.searchbar.btn:hover
+{
+  background: white;
+}
+.searchbar.btn:hover .searchbar-btn-icon
+{
+  background: url(../img/searchiconblack.png) no-repeat top center;
+  background-size: 20px;
+}
+.searchbar-holder
+{
+  height: 50px;
+  margin: 0 4px 13px;
+  display: none;
+}
+.searchbar-btn-icon
+{
+  height: 21px;
+  width: 21px;
+  background: url(../img/searchiconwhite.png) no-repeat top center;
+  background-size: 20px;
+  top: 0;
+  margin: auto;
+}
+.under-search.link
+{
+  padding: 3px 6px;
+  font-size: 9.5pt;
+}
+
+/* Advanced Search */
+.adv-search-btn-holder
+{
+  display: none;
+  margin-bottom: 15px;
+}
+.adv-search-btn.link {
+  padding: 5px;
+}

@@ -1,0 +1,123 @@
+body
+{
+  font-size: 10pt;
+}
+
+/* Center logo */
+img.logo
+{
+  height: unset;
+  max-width: 40%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo-holder
+{
+  position: absolute;
+  width: 100%;
+}
+
+/* Topbar formatting */
+div.topbar.translucent {
+  background-image: url(../img/top-banner.png);
+  background-repeat: repeat-x;
+  background-size: 400px;
+  background-position-y: -160px;
+  height: 90%;
+}
+.topbar-content .topbtn
+{
+  display: none;
+}
+
+/* Mobile sidebar icon */
+.sidebar-mobile-icon-holder {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  height: 50px;
+  width: 50px;
+}
+.icon-wrapper {
+  height: 30px;
+  width: 30px;
+}
+.circle {
+  width:30px;
+  height:30px;
+  position:relative;
+}
+.line {
+  position: absolute;
+  height: 5px;
+  width:100%;
+  background:white;
+  border-radius:4px;
+  transition: all cubic-bezier(0.26, 0.0, 0.27, 0.0) 0.2s;
+}
+.top {
+  top:18%;
+}
+.middle {
+  top:48%;
+}
+.bottom {
+  top:78%;
+}
+.icon.close .top {
+  transform:rotate(45deg);
+  top:48%;
+}
+.icon.close .middle, .icon.close .bottom {
+  transform:rotate(-45deg);
+  top:48%;
+}
+
+/* Mobile sidebar */
+.sidebar
+{
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 220px;
+  left: -325px;
+  top: 0;
+  background: black;
+  color: white;
+  z-index: 10;
+}
+.sidenav-holder
+{
+  padding: 6px 0;
+}
+.sidenav-list
+{
+  padding: 30px 0;
+  list-style: none;
+  position: absolute;
+}
+#search-btn, #search-btn:hover
+{
+  background: none;
+  height: unset;
+  width: unset;
+}
+.title-sidebar
+{
+  padding: 0 11px;
+}
+button
+{
+  font-size: 8pt;
+  padding: 2px 15px;
+}
+.page-container
+{
+  padding: 74px 29px;
+  width: calc(100% - 58px);
+}
