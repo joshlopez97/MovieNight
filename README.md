@@ -3,12 +3,38 @@ MovieNight is a web application for browsing and buying movies. The application 
 
 ## How to run application
 ### Prerequisites
-- Need mySQL server running with four databases created (each DB can be on a different server or on the same server)
-- Configure config.yaml in each of the microservices to point to the correct database with the correct credentials
-### Run application
+- Need SQL server running with four databases created (each DB can be on a different server or on the same server)
+- Configure config.yaml in each of the microservices to point to the correct database with the correct credentials, ports, etc.
+- Java 8 and Gradle 5.2+
+- Docker installed (if building using Dockerfile)
+### Run using Dockerfile
 Clone this repository and cd into it:  
-`git clone https://github.com/joshlopez97/MovieNight.git`  
-TODO  
+```
+git clone https://github.com/joshlopez97/MovieNight.git
+cd MovieNight
+```
+Build and run the docker image
+```
+docker build -t movienight .
+docker run movienight
+```
+### Run without Docker
+Clone this repository and cd into it:  
+```
+git clone https://github.com/joshlopez97/MovieNight.git
+cd MovieNight
+```
+Build and run all four microservices using Gradle
+```
+gradle -p idm build
+java -jar idm/build/lib/com.mn.service.idm-all.jar -c idm/config.yaml
+gradle -p inventory build
+java -jar inventory/build/lib/com.mn.service.inventory-all.jar -c inventory/config.yaml
+gradle -p billing build
+java -jar billing/build/lib/com.mn.service.billing-all.jar -c billing/config.yaml
+gradle -p gateway build
+java -jar gateway/build/lib/com.mn.service.gateway-all.jar -c gateway/config.yaml
+```
 
 ## Service Architecture
 ### Gateway Service
